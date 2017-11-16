@@ -2,14 +2,14 @@
 
 Agenda Telefônica
 
-Fazer um programa para simular uma agenda de telefones.
-Cada pessoa da agenda deve ter os seguintes dados:
-      • Nome
-      • E-mail
-      • Endereço (contendo campos para Rua, número, complemento, bairro, cep, cidade, estado, paı́s).
-      • Telefone (contendo campo para DDD e número)
-      • Data de aniversário (contendo campo para dia, mês, ano).
-      • Observações: uma linha (string) para alguma observação especial.
+      Fazer um programa para simular uma agenda de telefones.
+      Cada pessoa da agenda deve ter os seguintes dados:
+       - Nome
+       - E-mail
+       - Endereço (contendo campos para Rua, número, complemento, bairro, cep, cidade, estado, paı́s).
+       - Telefone (contendo campo para DDD e número)
+       - Data de aniversário (contendo campo para dia, mês, ano).
+       - Observações: uma linha (string) para alguma observação especial.
 
 
       (a) Definir as estruturas acima.
