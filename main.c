@@ -31,6 +31,6 @@ Cada pessoa da agenda deve ter os seguintes dados:
 
 int main()
 {
-    printf("Hello world!\n");
+    printf("Boa noite!\n");
     return 0;
 }
