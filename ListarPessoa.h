@@ -1,9 +1,10 @@
     #include <stdio.h>
-    #include <pessoa.h>
+    #include <string.h>
+    #include "pessoa.h"
 
    void ListarPessoa(Pessoa vet[],int quantidade)
 {
-    int i, j, cont = 0;
+    int i, j;
     char nomeAux[50];
     
     for(i=0;i<quantidade;i++)
@@ -18,4 +19,10 @@
             }
         }
     }
+
+    for(i=0;i<quantidade;i++)
+    {
+        printf("%s\n",vet[i].nome);
+    }
+
 }
