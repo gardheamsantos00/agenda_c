@@ -1,28 +1,21 @@
-#include <stdio.h>
-#include <pessoa.h>
+    #include <stdio.h>
+    #include <pessoa.h>
 
-void ListarPessoa(Pessoa vet[])
+   void ListarPessoa(Pessoa vet[],int quantidade)
 {
     int i, j, cont = 0;
-    char nomeAux[30];
-
-
-    for(i=0;vet[i] != NULL;i++)
-        cont++;
-
-
-        for(i=0;i<cont;i++)
+    char nomeAux[50];
+    
+    for(i=0;i<quantidade;i++)
     {
-        for(j=0;j<cont-1;j++)
+        for(j=0;j<quantidade-1;j++)
         {
-            if(strcmp(Pessoa.nome[j],Pessoa.nome[j+1]) > 0)
+            if(strcmp(vet[j].nome,vet[j+1].nome) > 0)
             {
-                strcpy(nomeAux,Pessoa.nome[j+1]);
-                strcpy(Pessoa.nome[j+1],Pessoa.nome[j]);
-                strcpy(Pessoa.nome[j],nomeAux);
-
+                strcpy(nomeAux,vet[j+1].nome);
+                strcpy(vet[j+1].nome,vet[j].nome);
+                strcpy(vet[j].nome,nomeAux);
             }
         }
     }
-
 }
