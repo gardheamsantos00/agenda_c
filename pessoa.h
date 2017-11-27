@@ -1,5 +1,3 @@
-#include <stdio.h> 
-
 typedef struct endereco
 {
     char rua[100];
