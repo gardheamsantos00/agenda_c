@@ -7,7 +7,6 @@ void Menu()
 
     do
     {
-        
         system("cls");
         printf("===================================\n");
         printf("| A.Buscar Nome.................1 |\n");
