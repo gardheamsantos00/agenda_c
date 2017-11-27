@@ -31,4 +31,5 @@ typedef struct pessoa
     Telefone telefone;
     Data aniversario;
     char Observacao[100];
+    
 }Pessoa;
