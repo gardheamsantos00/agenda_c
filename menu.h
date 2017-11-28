@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "BuscaPrimeiroNome.h"
 
 void Menu()
 {
@@ -10,9 +11,9 @@ void Menu()
         system("cls");
         printf("===================================\n");
         printf("| A.Buscar Nome.................1 |\n");
-        printf("| B.Aniversários do Mes.........2 |\n");
-        printf("| C.Aniversários do Dia e Mes...3 |\n");
-        printf("| D.Pessoas em Ordem Alfabética.4 |\n");
+        printf("| B.Aniversarios do Mes.........2 |\n");
+        printf("| C.Aniversarios do Dia e Mes...3 |\n");
+        printf("| D.Pessoas em Ordem Alfabetica.4 |\n");
         printf("| E.............................5 |\n");
         printf("| F.............................6 |\n");
         printf("| G.............................7 |\n");
@@ -23,6 +24,12 @@ void Menu()
         printf("OPCAO: ");
         scanf("%d", &opcao);
 
-        
+        switch(opcao)
+        {
+            case 1:
+                printf("");
+                //BuscaPrimeiroNome();
+                break;
+        }        
     }while(opcao != 0);
 }
