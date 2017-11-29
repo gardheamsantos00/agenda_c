@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "pessoa.h"
 
 int indexAgenda = 0;
-char agenda[100];
+Pessoa agenda[100];
