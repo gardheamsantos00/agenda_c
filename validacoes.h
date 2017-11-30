@@ -1,6 +1,6 @@
 #include<stdlib.h>
 
-void Valida_Email(char *email){
+int Valida_Email(char *email){
     int i=0,depoisArroba=0;
     
     if(strlen(email) < 8 ){
@@ -10,8 +10,6 @@ void Valida_Email(char *email){
         return -1;
     }
     else {
-            
-
 
         }
     }
