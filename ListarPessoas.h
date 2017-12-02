@@ -2,11 +2,10 @@
 #include <string.h>
 #include "pessoa.h"
 
-
 void ListarPessoa(Pessoa vet[],int quantidade)
 {
     int i, j;
-    char nomeAux[30];
+    char nomeAux[50];
 
 
         for(i=0;i<quantidade;i++)
