@@ -107,5 +107,18 @@ int validaCEP(Endereco endereco){
 
 }
 
-int validaEstado(){}
+int validaEstado(char estado){
 
+    char listaEstado = ["al","ap","am","ba","ce","df","es","go","ma","mt","ms"
+                        ,"mg","pa","pb","pr","pe","pi","rn","rj","rs","ro","rr",
+                        "sc","sp","se","to"];
+    int i;
+    for(i=0; i < 26; i++){
+        if(strcmp(listaEstado[i], estado) == 0 ){
+            return 1;
+        }
+    }
+
+    return -1;
+
+}
