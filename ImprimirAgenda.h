@@ -1,13 +1,15 @@
 #include "pessoa.h"
 #include <stdio.h>
 #include <string.h>
+#include "declara_vet.h"
 
 
-void Imprimir(char nome[50], Pessoa vet[],int quantidadeContatos)
+void Imprimir(char nome[50], Pessoa vet[])
 {
     char nomeAux[50],emailAux[100],enderecoAux[100],telefoneAux[9],observacaoAux[100],estadoAux[2];
     int numeroAux,aniversarioAux;
     int i,j,opcao;
+
 
     printf("1-Imprime nome, telefone e e-mail (ordem alfabética de nome).\n");
     printf("2-Imprime nome, telefone e e-mail (separado por localidade).\n");
@@ -17,9 +19,9 @@ void Imprimir(char nome[50], Pessoa vet[],int quantidadeContatos)
     switch(opcao)
     {
         case 1: 
-                for(i=0;i<quantidadeContatos;i++)  //ORDENAÇAO DO VETOR
+                for(i=0;i<indexAgenda;i++)  //ORDENAÇAO DO VETOR
                 {
-                    for(j=0;j<quantidadeContatos-1;j++)
+                    for(j=0;j<indexAgenda-1;j++)
                     {  
                         if(strcmp(vet[j].nome,vet[j+1].nome) > 0)   
                         {
@@ -43,7 +45,7 @@ void Imprimir(char nome[50], Pessoa vet[],int quantidadeContatos)
                     }
                 }
 
-                for(i=0;i<quantidadeContatos;i++)
+                for(i=0;i<indexAgenda;i++)
                 {
                     printf("Nome:%s\n",vet[i].nome);
                     printf("Telefone:(%d)%d\n",vet[i].telefone.ddd,vet[i].telefone.numero);
@@ -54,9 +56,9 @@ void Imprimir(char nome[50], Pessoa vet[],int quantidadeContatos)
 
             break;
         case 2:                
-                for(i=0;i<quantidadeContatos;i++)  //ORDENAÇAO DO VETOR
+                for(i=0;i<indexAgenda;i++)  //ORDENAÇAO DO VETOR
                 {
-                    for(j=0;j<quantidadeContatos-1;j++)
+                    for(j=0;j<indexAgenda-1;j++)
                     {  
                         if(strcmp(vet[j].endereco.estado,vet[j+1].endereco.estado) > 0)   
                         {
@@ -88,7 +90,7 @@ void Imprimir(char nome[50], Pessoa vet[],int quantidadeContatos)
 
                 printf("%s\n\n",vet[0].endereco.estado);
 
-                for(i=0;i<quantidadeContatos;i++)
+                for(i=0;i<indexAgenda;i++)
                 {   
                     if(strcmp(vet[i].endereco.estado,estadoAux) != 0)
                     {
@@ -109,9 +111,9 @@ void Imprimir(char nome[50], Pessoa vet[],int quantidadeContatos)
             break;
         
         case 3: 
-                for(i=0;i<quantidadeContatos;i++)  //ORDENAÇAO DO VETOR
+                for(i=0;i<indexAgenda;i++)  //ORDENAÇAO DO VETOR
                 {
-                    for(j=0;j<quantidadeContatos-1;j++)
+                    for(j=0;j<indexAgenda-1;j++)
                     {
                         if(strcmp(vet[j].nome,vet[j+1].nome) > 0)   
                         {   
@@ -189,7 +191,7 @@ void Imprimir(char nome[50], Pessoa vet[],int quantidadeContatos)
                 }
 
 
-                for(i=0;i<quantidadeContatos;i++)
+                for(i=0;i<indexAgenda;i++)
                 {
                     printf("Nome:%s\n",vet[i].nome);
                     printf("Email:%s\n",vet[i].email);

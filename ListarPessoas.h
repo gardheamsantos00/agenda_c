@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 #include "pessoa.h"
+#include "declara_vet.h"
 
-void ListarPessoa(Pessoa vet[],int quantidade)
+void ListarPessoa(Pessoa vet[])
 {
     int i, j;
     char nomeAux[50];
 
 
-        for(i=0;i<quantidade;i++)
+        for(i=0;i<indexAgenda;i++)
     {
-        for(j=0;j<quantidade-1;j++)
+        for(j=0;j<indexAgenda-1;j++)
         {
             if(strcmp(vet[j].nome,vet[j+1].nome) > 0)
             {
@@ -21,7 +22,7 @@ void ListarPessoa(Pessoa vet[],int quantidade)
         }
     }
 
-    for(i=0;i<quantidade;i++)
+    for(i=0;i<indexAgenda;i++)
         printf("%s\n",vet[i].nome);
 
 }
