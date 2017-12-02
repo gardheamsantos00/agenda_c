@@ -1,20 +1,23 @@
 #include "pessoa.h"
 #include <stdio.h>
 #include <string.h>
+#include "declara_vet.h"
 
 void BuscaPrimeiroNome(char nome[50], Pessoa vet[])
 {
     char nomeAux[50];
     int i,j=0;
 
-    for(i=0;i<100;i++)
+    for(i=0;i<indexAgenda;i++)
     {
         while(vet[i].nome[j] != ' ')
         {
             nomeAux[j] = vet[i].nome[j];
             j++;
         }
+        
         nomeAux[j] = '/0';
+        j = 0;
 
         if(strcmp(nomeAux,nome) == 0)
         {
@@ -29,8 +32,6 @@ void BuscaPrimeiroNome(char nome[50], Pessoa vet[])
             printf("Aniversario:%d/%d/%d\n",vet[i].aniversario.dia,vet[i].aniversario.mes,vet[i].aniversario.ano);
             printf("Observacoes:%s\n",vet[i].Observacao);
         }
-
-        j=0;
 
     }
 }

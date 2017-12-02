@@ -1,50 +1,51 @@
 #include "pessoa.h"
 #include <stdio.h>
+#include "declara_vet.h"
 
-Pessoa *Incluir(Pessoa vet[], int *contatos)
+Pessoa *Incluir(Pessoa vet[])
 {   
 
     printf("Digite o nome: ");
-    fgets(vet[*contatos].nome,50,stdin);
+    fgets(vet[indexAgenda].nome,50,stdin);
 
     printf("Digite o e-mail: ");
-    fgets(vet[*contatos].email,100,stdin);
+    fgets(vet[indexAgenda].email,100,stdin);
 
     printf("Digite o nome da rua: ");
-    fgets(vet[*contatos].endereco.rua,100,stdin);
+    fgets(vet[indexAgenda].endereco.rua,100,stdin);
 
     printf("Digite o numero da casa: ");
-    scanf("%d",&vet[*contatos].endereco.numero);
+    scanf("%d",&vet[indexAgenda].endereco.numero);
 
     printf("Digite o complemento do endereco: ");
-    fgets(vet[*contatos].endereco.complemento,100,stdin);
+    fgets(vet[indexAgenda].endereco.complemento,100,stdin);
 
     printf("Digite o nome do bairro: ");
-    fgets(vet[*contatos].endereco.bairro,100,stdin);
+    fgets(vet[indexAgenda].endereco.bairro,100,stdin);
 
     printf("Digite o CEP: ");
-    fgets(vet[*contatos].endereco.cep,8,stdin);
+    fgets(vet[indexAgenda].endereco.cep,8,stdin);
 
     printf("Digite o nome da cidade: ");
-    fgets(vet[*contatos].endereco.cidade,50,stdin);
+    fgets(vet[indexAgenda].endereco.cidade,50,stdin);
 
     printf("Digite a abreviatura do estado: "); //PRECISA CHAMAR A FUNÇAO VALIDAR ESTADO AQUI
-    fgets(vet[*contatos].endereco.estado,2,stdin);
+    fgets(vet[indexAgenda].endereco.estado,2,stdin);
 
     printf("Digite o país: ");
-    fgets(vet[*contatos].endereco.pais,50,stdin);
+    fgets(vet[indexAgenda].endereco.pais,50,stdin);
 
     printf("Digite o telefone: ");
-    scanf("%s",&vet[*contatos].telefone.ddd);
-    scanf("%s",&vet[*contatos].telefone.numero);
+    scanf("%s",&vet[indexAgenda].telefone.ddd);
+    scanf("%s",&vet[indexAgenda].telefone.numero);
 
     printf("Digite o aniversario(data separada por espacos): ");
-    scanf("%d %d %d",&vet[*contatos].aniversario.dia,&vet[*contatos].aniversario.mes,&vet[*contatos].aniversario.ano);
+    scanf("%d %d %d",&vet[indexAgenda].aniversario.dia,&vet[indexAgenda].aniversario.mes,&vet[indexAgenda].aniversario.ano);
 
     printf("Digite uma observacao: ");
-    fgets(vet[*contatos].Observacao,100,stdin);
+    fgets(vet[indexAgenda].Observacao,100,stdin);
 
-    *contatos++;
+    indexAgenda++;
 
     return vet;
 }
