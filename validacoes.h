@@ -2,8 +2,9 @@
 
 // retorna 1 se ok
 // retorna 0 se problema
-int validaEmail(){
-
+int validaEmail(Pessoa *vet[]){
+    
+    
 }
 
 int Valida_Telefone(){
