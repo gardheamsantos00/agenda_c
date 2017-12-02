@@ -84,7 +84,28 @@ int validaEmail(char email){
     return 1;
 }
 
-int validaCEP(){}
+//5 dígitos numéricos; um tracinho; 3 dígitos numéricos.
+// 12345-123
+int validaCEP(Endereco endereco){
+    
+    if(strcmp(endereco.cep[5], '-') != 0 ){
+        return -1;
+    }
+
+    if( !(isdigit(endereco.cep[0])) &&
+       !(isdigit(endereco.cep[1])) &&
+       !(isdigit(endereco.cep[2])) &&
+       !(isdigit(endereco.cep[3])) &&
+       !(isdigit(endereco.cep[4])) &&
+       !(isdigit(endereco.cep[6])) &&
+       !(isdigit(endereco.cep[7])) &&
+       !(isdigit(endereco.cep[8]))){
+        return -1;
+    }
+
+    return 1;
+
+}
 
 int validaEstado(){}
 
