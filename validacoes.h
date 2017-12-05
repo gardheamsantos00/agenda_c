@@ -107,18 +107,24 @@ int validaCEP(Endereco endereco){
 
 }
 
-int validaEstado(char estado){
+int validaEstado(char estado[])
+{
+    int i=0,j=0,k=0;
+    char listaEstado[77] = {"al ap am ba ce df es go ma mt ms mg pa pb pr pe pi rn rj rs ro rr sc sp se to"};
+    char Aux[3];
 
-    char listaEstado = ["al","ap","am","ba","ce","df","es","go","ma","mt","ms"
-                        ,"mg","pa","pb","pr","pe","pi","rn","rj","rs","ro","rr",
-                        "sc","sp","se","to"];
-    int i;
-    for(i=0; i < 26; i++){
-        if(strcmp(listaEstado[i], estado) == 0 ){
-            return 1;
+    for(i=0;i<77;i++)
+    {
+        if(listaEstado[i] == ' ')
+        {
+            Aux[0] = listaEstado[i-2];
+            Aux[1] = listaEstado[i-1];
+            printf("%s == %s\n",Aux,estado);
+
+            if(strcmp(Aux,estado) == 0)
+                return 1;
         }
     }
 
-    return -1;
-
+    return 0;
 }
