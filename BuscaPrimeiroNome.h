@@ -3,16 +3,16 @@
 #include <string.h>
 #include "declara_vet.h"
 
-void BuscaPrimeiroNome(char nome[50], Pessoa vet[])
+void BuscaPrimeiroNome(char nome[50])
 {
     char nomeAux[50];
     int i,j=0;
 
     for(i=0;i<indexAgenda;i++)
     {
-        while(vet[i].nome[j] != ' ')
+        while(agenda[i].nome[j] != ' ')
         {
-            nomeAux[j] = vet[i].nome[j];
+            nomeAux[j] = agenda[i].nome[j];
             j++;
         }
         
@@ -21,16 +21,16 @@ void BuscaPrimeiroNome(char nome[50], Pessoa vet[])
 
         if(strcmp(nomeAux,nome) == 0)
         {
-            printf("Nome:%s\n",vet[i].nome);
-            printf("Email:%s\n",vet[i].email);
-            printf("País:%s         Estado:%s\n",vet[i].endereco.pais,vet[i].endereco.estado);
-            printf("Cidade:%s       Bairro:%s\n",vet[i].endereco.cidade,vet[i].endereco.bairro);
-            printf("Rua:%s          Numero:%d\n",vet[i].endereco.rua,vet[i].endereco.numero);
-            printf("CEP:%s\n",vet[i].endereco.cep);
-            printf("Complemento:%s\n",vet[i].endereco.complemento);
-            printf("Telefone:(%d)%d\n",vet[i].telefone.ddd,vet[i].telefone.numero);
-            printf("Aniversario:%d/%d/%d\n",vet[i].aniversario.dia,vet[i].aniversario.mes,vet[i].aniversario.ano);
-            printf("Observacoes:%s\n",vet[i].Observacao);
+            printf("Nome:%s\n",agenda[i].nome);
+            printf("Email:%s\n",agenda[i].email);
+            printf("País:%s         Estado:%s\n",agenda[i].endereco.pais,agenda[i].endereco.estado);
+            printf("Cidade:%s       Bairro:%s\n",agenda[i].endereco.cidade,agenda[i].endereco.bairro);
+            printf("Rua:%s          Numero:%d\n",agenda[i].endereco.rua,agenda[i].endereco.numero);
+            printf("CEP:%s\n",agenda[i].endereco.cep);
+            printf("Complemento:%s\n",agenda[i].endereco.complemento);
+            printf("Telefone:(%d)%d\n",agenda[i].telefone.ddd,agenda[i].telefone.numero);
+            printf("Aniversario:%d/%d/%d\n",agenda[i].aniversario.dia,agenda[i].aniversario.mes,agenda[i].aniversario.ano);
+            printf("Observacoes:%s\n",agenda[i].Observacao);
         }
 
     }

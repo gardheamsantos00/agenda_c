@@ -2,20 +2,21 @@
 #include <stdio.h>
 #include <string.h>
 #include "declara_vet.h"
+#include <ctype.h>
 
 
 //Validar data: dias entre 1 e 30
 //(inclusive); mês entre 1 e 12 (inclusive);
 // anos entre 1900 e data corrente
-int validaData(Data data){
-    if(data.dia < 1 || data.dia > 30){
+int validaData(int dia, int mes, int ano){
+    if(dia < 1 || dia > 30){
         return 0;
     }
-    if(data.mes < 1 || data.mes > 12){
+    if(mes < 1 || mes > 12){
         return 0;
     }
-    if(data.ano < 1900 || data.ano > 2017){
-        return 0
+    if(ano < 1900 || ano > 2017){
+        return 0;
     }
 
     return 1;
@@ -59,6 +60,7 @@ int validaTel(char telefone[]){
             }
         }
 
+        return 1;
     }
 
     //TELEFONE FIXO
@@ -89,7 +91,7 @@ int validaTel(char telefone[]){
         return 0;
     }
 
-    return 1;
+    return 2;
 
 }
 
@@ -198,7 +200,7 @@ int validaCEP(char cep[]){
 
 int validaEstado(char estado[]){
     int i = 0, j = 0, k = 0;
-    char listaEstado[77] = {"al ap am ba ce df es go ma mt ms mg pa pb pr pe pi rn rj rs ro rr sc sp se to"};
+    char listaEstado[79] = {"al ap am ba ce df es go ma mt ms mg pa pb pr pe pi rn rj rs ro rr sc sp se to "};
     char Aux[3];
 
     for (i = 0; i < 77; i++){
