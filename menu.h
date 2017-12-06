@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include "BuscaPrimeiroNome.h"
 #include "buscaMes.h"
-#include "buscaDia-Mes"
+#include "buscaDia-Mes.h"
+#include "IncluirPessoa.h"
+#include "RemoverPessoa.h"
+#include "ListarPessoas.h"
 
 void Menu()
 {
@@ -19,11 +22,9 @@ void Menu()
         printf("| B.Aniversarios do Mes.........2 |\n");
         printf("| C.Aniversarios do Dia e Mes...3 |\n");
         printf("| D.Imprimir Agenda.............4 |\n");
-        printf("| E.............................5 |\n");
-        printf("| F.............................6 |\n");
-        printf("| G.............................7 |\n");
-        printf("| H.............................8 |\n");
-        printf("| I.............................9 |\n");
+        printf("| E.Incluir Pessoa..............5 |\n");
+        printf("| F.Remover Pessoa..............6 |\n");
+        printf("| G.Listar Pessoas..............7 |\n");
         printf("| SAIR..........................0 |\n");
         printf("===================================\n");
         printf("OPCAO: ");
@@ -53,24 +54,17 @@ void Menu()
                 ImprimirAgenda();
                 break;
             case 5:
-                printf("");
-                //BuscaPrimeiroNome();
+                Incluir();
                 break;
             case 6:
-                printf("");
-                //BuscaPrimeiroNome();
+                printf("Escreva o nome da pessoa a ser removida: ");
+                gets(nome);
+                RemoverPessoa(nome);
                 break;
             case 7:
-                printf("");
-                //BuscaPrimeiroNome();
+                ListarPessoa();
                 break;
-            case 8:
-                printf("");
-                //BuscaPrimeiroNome();
-                break;
-            case 9:
-                printf("");
-                //BuscaPrimeiroNome();
+            default:
                 break;
         }        
     }while(opcao != 0);

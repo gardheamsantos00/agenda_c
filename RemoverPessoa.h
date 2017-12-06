@@ -1,6 +1,6 @@
 #include <string.h>
 #include "pessoa.h"
-#include "declara.h"
+#include "declara_vet.h"
 
 void ApagarDados(int ultimoIndex)
 {
@@ -52,14 +52,15 @@ void ExcluirPessoa(char nome[])
 {
     int index;
 
-    for(index = 0; index < 100; index++)
+    for(index = 0; index < indexAgenda; index++)
     {
         if(strcmp(agenda[index], nome))
         {
-            RealocaIndexes(index);
-            ApagarDados(indexAgenda);
-            indexAgenda--;
-            index--;
+            RealocaIndexes(index); //Realoca todos os dados passando a posição seguinte para a posição atual.
+            ApagarDados(indexAgenda); //Apaga os dados da ultima posição do vetor.
+            indexAgenda--; //Como foi removido uma pessoa ele diminui 1 do index agenda.
+            index--; /*Como todos os indices a partir do indice atual foram 
+            realocados ele volta 1 para validar o novo registro na posição atual*/
         }
     }
 }
