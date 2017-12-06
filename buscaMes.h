@@ -3,24 +3,24 @@
 #include <string.h>
 #include "declara_vet.h"
 
-int BuscaPorMes(int mes, Pessoa pessoa[]){
+int BuscaPorMes(int mes){
 
     int i;
 
     for(i=0; i < indexAgenda; i++){
 
-		if(pessoa[i].aniversario.mes == mes){
+		if(agenda[i].aniversario.mes == mes){
 
-			printf("\nNOME :%s",pessoa[i].nome);
-            printf("\nEMAIL:%s",pessoa[i].email);
-            printf("\nPaís:%s         Estado:%s",pessoa[i].endereco.pais,pessoa[i].endereco.estado);
-            printf("\nCidade:%s       Bairro:%s",pessoa[i].endereco.cidade,pessoa[i].endereco.bairro);
-            printf("\nRua:%s          Numero:%d",pessoa[i].endereco.rua,pessoa[i].endereco.numero);
-            printf("\nCEP:%s",pessoa[i].endereco.cep);
-            printf("\nComplemento:%s",pessoa[i].endereco.complemento);
-            printf("\nTelefone:(%d)%d",pessoa[i].telefone.ddd,pessoa[i].telefone.numero);
-            printf("\nAniversario:%d/%d/%d",pessoa[i].aniversario.dia,pessoa[i].aniversario.mes,pessoa[i].aniversario.ano);
-            printf("\nObservacoes:%s",pessoa[i].Observacao);
+			printf("\nNOME :%s",agenda[i].nome);
+            printf("\nEMAIL:%s",agenda[i].email);
+            printf("\nPaís:%s         Estado:%s",agenda[i].endereco.pais,agenda[i].endereco.estado);
+            printf("\nCidade:%s       Bairro:%s",agenda[i].endereco.cidade,agenda[i].endereco.bairro);
+            printf("\nRua:%s          Numero:%d",agenda[i].endereco.rua,agenda[i].endereco.numero);
+            printf("\nCEP:%s",agenda[i].endereco.cep);
+            printf("\nComplemento:%s",agenda[i].endereco.complemento);
+            printf("\nTelefone:(%d)%d",agenda[i].telefone.ddd,agenda[i].telefone.numero);
+            printf("\nAniversario:%d/%d/%d",agenda[i].aniversario.dia,agenda[i].aniversario.mes,agenda[i].aniversario.ano);
+            printf("\nObservacoes:%s",agenda[i].Observacao);
 		}
     }
     return -1;

@@ -11,7 +11,7 @@ void Menu()
 {
     int opcao = -1;
     char nome[100];
-    int mes;
+    int mes, dia;
 
 
     do
@@ -36,19 +36,19 @@ void Menu()
             case 1:
                 printf("Escreva o nome a ser buscado: ");
                 gets(nome);
-                BuscaPrimeiroNome();
+                BuscaPrimeiroNome(nome);
                 break;
             case 2:
                 printf("Escreva o mes a ser buscado: ");
-                gets(mes);
+                scanf("%d", mes);
                 BuscaPorMes(mes);
                 break;
             case 3:
                 printf("Escreva o dia a ser buscado: ");
-                gets(dia);
+                scanf("%d", dia);
                 printf("Escreva o mes a ser buscado: ");
-                gets(mes);
-                BuscaPorMes(dia, mes);
+                scanf("%d", mes);
+                BuscaPorDiaMes(dia, mes);
                 break;
             case 4:
                 ImprimirAgenda();
