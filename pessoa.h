@@ -1,3 +1,9 @@
+typedef struct telefone
+{
+    char ddd[2];
+    char numero[9];
+}Telefone;
+
 typedef struct endereco
 {
     char rua[100];
@@ -9,12 +15,6 @@ typedef struct endereco
     char estado[2];
     char pais[50];
 }Endereco;
-
-typedef struct telefone
-{
-    char ddd[2];
-    char numero[9];
-}Telefone;
 
 typedef struct data
 {
